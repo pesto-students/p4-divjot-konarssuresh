@@ -49,3 +49,14 @@ Using domain name browser does domain lookup to find the IP address of the Url
 
 ![image](https://user-images.githubusercontent.com/29543196/180223933-f9550262-04ea-4a0f-bf8d-6465240e207a.png)
 
+1. **HTML Parsing**:-
+   * contains 2 stages Tokenization and tree construction
+   * tokenization is nothing but parsing HTML input into token. In HTML token is start tag, end tag, attribute name and values
+   * tokenizer recognizes the token, passes it to tree constructor and continues the process to recognize child tokens until the end of the token.
+   
+   ![image](https://user-images.githubusercontent.com/29543196/180229587-aa03187a-5bbd-4120-baaa-d4f437cfef0e.png)
+2. **CSS Parsing**:- CSS parsing is done by bottom-up or top-down parser based on browser. Eg firefox uses top-down parser and bison uses bottom-up parser.
+    CSS files is parsed into Stylesheet object
+3. **Scripts**:- When the parser reaches script tag, the parsing of the document halts until the script is executed. if the script is external the script needs to be fetched from the network. Parsing is halted till the script is fetched and executed. We can add `defer` attribute to the script . with that the parsing is not halted and script is executed after parsing the document.
+
+
