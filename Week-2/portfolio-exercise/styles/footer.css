@@ -6,6 +6,7 @@
   align-items: center;
   justify-content: center;
   padding: 1rem;
+  row-gap: 0.5rem;
 }
 
 .footer a {

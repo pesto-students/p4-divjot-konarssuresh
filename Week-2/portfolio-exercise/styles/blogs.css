@@ -5,10 +5,11 @@
 }
 
 .blogs--child {
-  width: 26rem;
+  width: 35rem;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  margin: 0 1rem;
 }
 .blogs--child-image {
   display: flex;
@@ -17,4 +18,10 @@
 
 .blogs--child article {
   text-align: justify;
+}
+
+@media only screen and (min-width: 600px) {
+  .signup {
+    width: 26rem;
+  }
 }

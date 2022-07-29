@@ -5,6 +5,11 @@
 .form--input-group {
   margin-bottom: 1rem;
 }
+
+.form--input-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+}
 .form--input {
   display: block;
   width: 100%;
@@ -47,6 +52,14 @@
 
 .dropdown {
   padding: 2px 1px;
+}
+.signup--button-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.signup--button-container input {
+  width: 40%;
 }
 
 @media only screen and (min-width: 600px) {
