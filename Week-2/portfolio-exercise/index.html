@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles/index.css" />
+    <title>Portfolio</title>
+  </head>
+  <body>
+    <main>
+      <nav class="nav">
+        <a href="#" class="nav-brand">Portfolio</a>
+      </nav>
+
+      <section class="jumbotron">
+        <header class="header">
+          <h1 class="h1 page-heading text-center">Lorem Ipsum</h1>
+          <p class="lead text-center">
+            Neque porro quisquam est qui dolorem ipsum quia dolor sit amet,
+            consectetur, adipisci velit...
+          </p>
+          <hr />
+          <p class="text-center">
+            View some more blogs and if you like it ,sign up for free.
+          </p>
+          <div class="button-container">
+            <button class="button button-primary button-lg">View Blogs</button>
+            <button class="button button-primary button-lg">SignUp</button>
+          </div>
+        </header>
+      </section>
+      <div class="container">
+        <section id="blog-section" class="blogs">
+          <section class="blogs--child">
+            <article>
+              <p>
+                Etiam id est arcu. Donec pharetra arcu a nunc hendrerit, a
+                pharetra enim vulputate. Mauris eget ornare urna. In condimentum
+                ac neque sit amet hendrerit. Proin vitae eros id lectus ornare
+                consequat. Quisque vestibulum nunc at dignissim cursus. Aenean
+                scelerisque.
+              </p>
+            </article>
+            <figure class="blogs--child-image">
+              <img
+                src="https://picsum.photos/300/300"
+                alt="image for lorem ipsum article"
+              />
+            </figure>
+          </section>
+          <section class="blogs--child">
+            <article>
+              <p>
+                Vivamus augue leo, bibendum eget leo id, dictum congue leo.
+                Aliquam ac congue diam. Donec dictum dignissim lorem, ut ornare
+                velit blandit fermentum. Mauris porta vulputate risus sit amet
+                dignissim. Suspendisse vitae turpis sed nulla vehicula
+                elementum. Pellentesque facilisis nulla.
+              </p>
+            </article>
+            <article>
+              <h4>Sed Vehicula Tempor</h4>
+              <p>
+                Sed vehicula tempor augue, vel sodales enim tempor nec. Donec
+                porttitor dictum tincidunt. Fusce in neque id libero rutrum
+                placerat at eu odio. Maecenas ultrices interdum blandit. Nunc
+                luctus nisl a tellus laoreet pretium. Donec posuere aliquet mi.
+                Suspendisse potenti.
+              </p>
+            </article>
+            <article>
+              <h4>Vestibulum tellus nibh</h4>
+              <p>
+                Vestibulum tellus nibh, mattis sit amet porta quis, eleifend in
+                risus. Vivamus consectetur sagittis nibh eu dapibus. Maecenas
+                ornare justo ac est efficitur porta. Donec eu mattis sapien.
+                Cras dignissim nibh id mattis imperdiet. Pellentesque habitant
+                morbi tristique senectus et.
+              </p>
+            </article>
+          </section>
+        </section>
+        <section id="signup-section" class="signup">
+          <!-- signup form -->
+          <h3 class="h3 text-center">Sign up</h3>
+          <form onsubmit="return false;">
+            <div class="inline-radio-group">
+              <label>Title</label>
+              <div class="inline-radio-group--child">
+                <div class="radio">
+                  <input type="radio" name="title" value="mr" id="mr" />
+                  <label for="mr">Mr</label>
+                </div>
+                <div class="radio">
+                  <input type="radio" name="title" value="mrs" id="mrs" />
+                  <label for="mrs">Mrs</label>
+                </div>
+                <div class="radio">
+                  <input type="radio" name="title" value="miss" id="miss" />
+                  <label for="miss">Mr</label>
+                </div>
+              </div>
+            </div>
+
+            <div class="form--input-group">
+              <label for="fname">First Name</label>
+              <input name="fname" id="fname" class="form--input" type="text" />
+            </div>
+            <div class="form--input-group">
+              <label for="lname">Last Name</label>
+              <input name="lname" id="lname" class="form--input" type="text" />
+            </div>
+            <div class="form--input-group">
+              <label for="userMail">Email</label>
+              <input
+                name="userMail"
+                id="userMail"
+                class="form--input"
+                type="email"
+              />
+            </div>
+            <div class="form--input-group">
+              <label for="phno">Phone</label>
+              <input name="phno" id="phno" class="form--input" type="phone" />
+            </div>
+            <div class="form--input-group">
+              <label for="passwd">Password</label>
+              <input
+                name="passwd"
+                id="passwd"
+                class="form--input"
+                type="password"
+              />
+            </div>
+            <div class="form--input-group">
+              <label for="cpasswd">Confirm Your Password</label>
+              <input
+                name="cpasswd"
+                id="cpasswd"
+                class="form--input"
+                type="password"
+              />
+            </div>
+            <div class="form--input-group">
+              <label for="country">country</label>
+              <select name="country" id="country" class="form--input dropdown">
+                <option value="India">India</option>
+                <option value="us">USA</option>
+                <option value="canada">Canada</option>
+              </select>
+            </div>
+            <div class="form--input-group">
+              <input type="checkbox" name="acceptConditions" /><label
+                >I accept to <a href="#"> terms and conditions</a></label
+              >
+            </div>
+            <div class="signup--button-container">
+              <input
+                type="submit"
+                text="Sign-up"
+                class="button button-success"
+              />
+              <input type="reset" text="Reset" class="button button-danger" />
+            </div>
+          </form>
+        </section>
+      </div>
+
+      <footer class="footer">
+        <h3 class="text-center">Declaration</h3>
+        <article class="justify">
+          Etiam id est arcu. Donec pharetra arcu a nunc hendrerit, a pharetra
+          enim vulputate. Mauris eget ornare urna. In condimentum ac neque sit
+          amet hendrerit. Proin vitae eros id lectus ornare consequat. Quisque
+          vestibulum nunc at dignissim cursus. Aenean scelerisque.
+        </article>
+        <article class="text-center">© 2022: <a href="#">Portfolio</a></article>
+      </footer>
+    </main>
+  </body>
+</html>
