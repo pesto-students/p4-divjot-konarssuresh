@@ -1,0 +1,14 @@
+@import url("./navbar.css");
+@import url("./typography.css");
+@import url("./commonUtils.css");
+@import url("./header.css");
+@import url("./blogs.css");
+@import url("./signup.css");
+@import url("./footer.css");
+* {
+  font-family: "Roboto", sans-serif;
+}
+
+body {
+  margin: 0;
+}

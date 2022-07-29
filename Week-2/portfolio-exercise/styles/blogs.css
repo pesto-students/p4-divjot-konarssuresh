@@ -1,0 +1,20 @@
+.blogs {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.blogs--child {
+  width: 26rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.blogs--child-image {
+  display: flex;
+  justify-content: center;
+}
+
+.blogs--child article {
+  text-align: justify;
+}
