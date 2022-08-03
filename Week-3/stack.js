@@ -1,3 +1,5 @@
+// Refactor the above stack implementation, using the concept of closure, such that there is noway to access items array outside of createStack() function scope:
+
 function createStack() {
   // Write your code here...
   const items = [];

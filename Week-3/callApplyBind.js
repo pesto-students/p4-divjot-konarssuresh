@@ -1,3 +1,6 @@
+//  Create 3 simple functions where call, bind and apply are used.
+// The intention of this exercise isto understand how they work and their differences.
+
 // bind -  bind creates seperate function where the context is permanently bould to different value
 const objToTestBind = {
   x: 42,
