@@ -15,7 +15,7 @@ const bindedFunc = func.bind(objToTestBind);
 console.log(bindedFunc()); //42
 //added this to show that once binded value cannot change
 const anotherBindedFunc = bindedFunc.bind({x: "abc"});
-console.log(func.bind(objToTestBind)()); //42
+console.log(anotherBindedFunc()); //42
 
 // call - it calls the function with different value of "this/object" and sets of arguments passed initially
 function testCall(name) {
