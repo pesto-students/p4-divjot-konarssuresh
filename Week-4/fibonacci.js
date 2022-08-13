@@ -1,12 +1,11 @@
 let fibonacciSeries = {
   [Symbol.iterator]() {
-    let series = [];
-    let currentIndex;
+    let series = [0];
+    let currentIndex = 0;
     return {
       next() {
-        if (currentIndex || currentIndex === 0) currentIndex++;
-        else currentIndex = 0;
-        if (series.length === 0 || series.length === 1) {
+        currentIndex++;
+        if (series.length <= 1) {
           series.push(1);
           return {value: series[currentIndex], done: false};
         } else {
