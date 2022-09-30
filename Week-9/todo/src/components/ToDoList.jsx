@@ -62,16 +62,7 @@ const ToDoList = ({taskList, onStatusChange, onRemoveTask}) => {
     <TaskListContainer>
       {taskList.map((task, index) => {
         return (
-          <TaskContainer
-            onMouseOver={(e) => {
-              setShowActionButton(true);
-            }}
-            onMouseOut={(e) => {
-              setShowActionButton(false);
-            }}
-            key={index}
-            status={task.status}
-          >
+          <TaskContainer key={index} status={task.status}>
             <span>{index + 1}</span>
             <DescriptionContainer>
               <input
