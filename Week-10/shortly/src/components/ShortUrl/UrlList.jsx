@@ -39,13 +39,20 @@ const UrlList = ({urlList = []}) => {
     <StyledContainer>
       {urlList.map(({url, shortUrl}, index) => {
         return (
-          <UrlContainer>
+          <UrlContainer key={index}>
             <p>{url}</p>
             <ShortUrlContainer>
               <ShortLink href={shortUrl} target="_blank">
                 {shortUrl}
               </ShortLink>
-              <CopyButton>Copy</CopyButton>
+              <CopyButton
+                onClick={async () => {
+                  await navigator.clipboard.writeText(shortUrl);
+                  alert("url copied to clipboard");
+                }}
+              >
+                Copy
+              </CopyButton>
             </ShortUrlContainer>
           </UrlContainer>
         );

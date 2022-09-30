@@ -58,13 +58,18 @@ const AddShortUrl = ({onAddUrl}) => {
       setLoading(true);
       const response = await fetch(`${BASE_URL}${SHORTEN}?url=${url}`);
       const data = await response.json();
-      onAddUrl({
-        shortUrl: data.result["full_short_link"],
-        url: data.result["original_link"],
-      });
-      setUrl("");
+      console.log(data);
+      if (data.ok) {
+        onAddUrl({
+          shortUrl: data.result["full_short_link"],
+          url: data.result["original_link"],
+        });
+        setUrl("");
+      } else {
+        alert(data?.error);
+      }
     } catch (e) {
-      alert("Something went wrong.Please try again");
+      alert("Something went wrong. Contact Support");
     } finally {
       setLoading(false);
     }
