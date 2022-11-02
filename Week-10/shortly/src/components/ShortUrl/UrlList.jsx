@@ -1,6 +1,7 @@
 import {Container, StyledButton} from "./AddShortUrl";
 import styled from "styled-components";
 import PropTypes from "prop-types";
+import React from "react";
 
 const UrlContainer = styled.div`
   border: 1px solid #c8c7c7;
@@ -34,27 +35,36 @@ const ShortLink = styled.a`
   text-decoration: none;
   color: #30c0be;
 `;
+
+const Url = React.memo(({url, shortUrl}) => {
+  return (
+    <UrlContainer>
+      <p>{url}</p>
+      <ShortUrlContainer>
+        <ShortLink href={shortUrl} target="_blank">
+          {shortUrl}
+        </ShortLink>
+        <CopyButton
+          onClick={async () => {
+            await navigator.clipboard.writeText(shortUrl);
+            alert("url copied to clipboard");
+          }}
+        >
+          Copy
+        </CopyButton>
+      </ShortUrlContainer>
+    </UrlContainer>
+  );
+});
+
 const UrlList = ({urlList = []}) => {
   return (
     <StyledContainer>
       {urlList.map(({url, shortUrl}, index) => {
         return (
-          <UrlContainer key={index}>
-            <p>{url}</p>
-            <ShortUrlContainer>
-              <ShortLink href={shortUrl} target="_blank">
-                {shortUrl}
-              </ShortLink>
-              <CopyButton
-                onClick={async () => {
-                  await navigator.clipboard.writeText(shortUrl);
-                  alert("url copied to clipboard");
-                }}
-              >
-                Copy
-              </CopyButton>
-            </ShortUrlContainer>
-          </UrlContainer>
+          <React.Fragment key={index}>
+            <Url url={url} shortUrl={shortUrl} />
+          </React.Fragment>
         );
       })}
     </StyledContainer>
