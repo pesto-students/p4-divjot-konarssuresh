@@ -1,0 +1,174 @@
+// signup
+1. /user/signup
+req - POST - 
+
+{
+    "firstName":"test",
+    "lastName":"test",
+    "password":"test",
+    "userId":"test@test.com"
+}
+
+res
+{
+    "message": "User added successfully"
+}
+
+2. /user/login
+req-POST
+{
+    "password":"test",
+    "userId":"test@test.com"
+}
+res-
+{
+    "message": "User logged in successfully"
+}
+
+//expesnse 
+1. /expense/addExpense
+re-POST
+{
+    "type":"spend",
+    "category":"Household",
+    "value":30,
+    "name":"milk",
+    "userId":"test@test.com"
+
+}
+res-
+{
+    "message": "expense added successfully"
+}
+
+2. /expense/editExpense 
+req-PUT
+{
+    "value":23,
+    "name":"milk today",
+    "userId":"test@test.com",
+    "expenseId":"6ba38e09-6690-4a4e-b0d2-eeabc6c801c6"
+}
+res- 
+{
+    "message": "expense updated successfully"
+}
+3.expense/deleteExpense
+req-DELETE
+{
+    "userId":"test@test.com",
+    "expenseId":"6ba38e09-6690-4a4e-b0d2-eeabc6c801c6"
+}
+res
+{
+    "message": "expense deleted successfully"
+}
+
+// reports
+1.reports/getIncomes
+req-POST
+{
+    "userId":"test@test.com"
+}
+res-
+{
+    "assets": [
+        {
+            "_id": "b08b2052-7723-485a-b7e7-9a430db94633",
+            "type": "income",
+            "category": "Asset",
+            "value": 300000,
+            "name": "land",
+            "userId": "test@test.com",
+            "notes": "regional land",
+            "date": "2022-11-13T11:10:05.440Z"
+        }
+    ],
+    "equity": [],
+    "fixedIncome": [],
+    "alternatives": []
+}
+
+2. reports/getYearsIncome
+req-POST
+{
+    "userId":"test@test.com"
+}
+res-
+{
+    "spends": [
+        {
+            "_id": "7e7f48da-8022-4ee4-af19-bc26265e0a66",
+            "type": "spend",
+            "category": "Social Life",
+            "value": 100000,
+            "name": "bike",
+            "userId": "test@test.com",
+            "notes": "todays milk",
+            "date": "2022-11-14T10:36:54.083Z"
+        },
+        {
+            "_id": "ea23b9b6-ab42-49e3-9495-c9fb52198757",
+            "type": "spend",
+            "category": "Household",
+            "value": 80,
+            "name": "mirchi powder",
+            "userId": "test@test.com",
+            "notes": "",
+            "date": "2022-11-14T05:49:41.606Z"
+        },
+        {
+            "_id": "2f7bca15-2b5d-492b-a3b6-ab322c1afecc",
+            "type": "spend",
+            "category": "Household",
+            "value": 30,
+            "name": "milk",
+            "userId": "test@test.com",
+            "notes": "todays milk",
+            "date": "2022-11-14T05:48:58.005Z"
+        },
+        {
+            "_id": "bc6568d9-3915-4086-96e9-d0f9a633a6d0",
+            "type": "spend",
+            "category": "Household",
+            "value": 10,
+            "name": "Ginger",
+            "userId": "test@test.com",
+            "notes": "",
+            "date": "2022-10-12T18:30:00.000Z"
+        },
+        {
+            "_id": "789a0e39-1c40-4174-9928-05e4edfe23fa",
+            "type": "spend",
+            "category": "Social Life",
+            "value": 1000,
+            "name": "Movie",
+            "userId": "test@test.com",
+            "notes": "",
+            "date": "2022-10-12T18:30:00.000Z"
+        },
+        {
+            "_id": "e5529262-701b-4897-9b63-1abb16ae6036",
+            "type": "spend",
+            "category": "Social Life",
+            "value": 1000,
+            "name": "Movie",
+            "userId": "test@test.com",
+            "notes": "",
+            "date": "2022-10-12T18:30:00.000Z"
+        }
+    ],
+    "income": [
+        {
+            "_id": "b08b2052-7723-485a-b7e7-9a430db94633",
+            "type": "income",
+            "category": "Asset",
+            "value": 300000,
+            "name": "land",
+            "userId": "test@test.com",
+            "notes": "regional land",
+            "date": "2022-11-13T11:10:05.440Z"
+        }
+    ],
+    "savings": 197880
+}
