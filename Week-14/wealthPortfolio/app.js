@@ -1,6 +1,7 @@
 import express from "express";
 import {userRouter} from "./routes/userRouter.js";
 import {expenseRouter} from "./routes/expenseRouter.js";
+import {reportsRouter} from "./routes/reportsRouter.js";
 import morgan from "morgan";
 import fs from "fs";
 import path, {dirname} from "path";
@@ -21,6 +22,7 @@ app.use(express.urlencoded({extended: false}));
 app.use(morgan("combined", {stream: accessLogStream}));
 app.use("/user", userRouter);
 app.use("/expense", expenseRouter);
+app.use("/reports", reportsRouter);
 app.use((err, res) => {
   if (err) {
     console.log(err);

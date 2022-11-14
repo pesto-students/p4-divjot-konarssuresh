@@ -103,20 +103,4 @@ expenseRouter.delete(
   }
 );
 
-expenseRouter.post(
-  "/getIncomes",
-  body("userId", "user id is required").isEmail(),
-  async (req, res, next) => {
-    const errors = validationResult(req);
-    if (!errors.isEmpty()) {
-      return res.status(400).json({errors: errors.array().map(({msg}) => msg)});
-    }
-    try {
-      await Expense.getUserIncomes(req, res);
-    } catch (e) {
-      next();
-    }
-  }
-);
-
 export {expenseRouter};
