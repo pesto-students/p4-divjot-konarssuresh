@@ -1,0 +1,3 @@
+::1 - - [14/Nov/2022:06:46:38 +0000] "POST /expense/addExpense HTTP/1.1" 200 40 "-" "PostmanRuntime/7.29.2"
+::1 - - [14/Nov/2022:09:14:52 +0000] "POST /expense/getIncomes HTTP/1.1" 200 205 "-" "PostmanRuntime/7.29.2"
+::1 - - [14/Nov/2022:09:20:06 +0000] "POST /expense/getIncomes HTTP/1.1" 200 253 "-" "PostmanRuntime/7.29.2"
