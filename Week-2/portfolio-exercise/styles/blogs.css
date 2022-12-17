@@ -1,0 +1,27 @@
+.blogs {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.blogs--child {
+  width: 35rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin: 0 1rem;
+}
+.blogs--child-image {
+  display: flex;
+  justify-content: center;
+}
+
+.blogs--child article {
+  text-align: justify;
+}
+
+@media only screen and (min-width: 600px) {
+  .signup {
+    width: 26rem;
+  }
+}

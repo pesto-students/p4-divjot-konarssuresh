@@ -1,0 +1,30 @@
+.nav {
+  display: flex;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #343a40;
+  padding: 0.5rem 0;
+}
+
+.nav img {
+  width: 1.75rem;
+  height: 1.75rem;
+  display: inline-block;
+}
+
+.nav-brand {
+  color: #fff;
+  display: inline-block;
+  padding-top: 0.3125rem;
+  padding-bottom: 0.3125rem;
+  padding-left: 1rem;
+  margin-right: 1rem;
+  font-size: 1.25rem;
+  line-height: inherit;
+  white-space: nowrap;
+  text-decoration: none;
+  background-color: transparent;
+}

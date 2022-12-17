@@ -1,0 +1,69 @@
+.signup {
+  margin: 2rem auto;
+}
+
+.form--input-group {
+  margin-bottom: 1rem;
+}
+
+.form--input-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+}
+.form--input {
+  display: block;
+  width: 100%;
+  /* padding: 0.375rem 0.75rem; */
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #495057;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 1px solid #ced4da;
+  border-radius: 0.25rem;
+}
+
+.form--input:focus {
+  color: #495057;
+  background-color: #fff;
+  border-color: #80bdff;
+  outline: 0;
+  box-shadow: 0 0 0 0.2rem rgb(0 123 255 / 25%);
+}
+
+.inline-radio-group {
+  display: flex;
+  column-gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.inline-radio-group--child {
+  display: flex;
+  column-gap: 0.25rem;
+}
+
+.radio {
+  display: flex;
+  align-items: baseline;
+}
+.radio label {
+  cursor: pointer;
+}
+
+.dropdown {
+  padding: 2px 1px;
+}
+.signup--button-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.signup--button-container input {
+  width: 40%;
+}
+
+@media only screen and (min-width: 600px) {
+  .signup {
+    width: 70vw;
+  }
+}

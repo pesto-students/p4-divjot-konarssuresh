@@ -1,0 +1,87 @@
+* {
+  font-family: "lato", sans-serif;
+}
+
+body {
+  margin: 0;
+}
+
+#root {
+  display: flex;
+  align-items: center;
+  height: 100vh;
+}
+
+.parent {
+  width: 20rem;
+  height: 20rem;
+  margin: auto;
+  position: relative;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.child {
+  position: absolute;
+  width: 10rem;
+  height: 10rem;
+  transition-property: transform;
+  transition-duration: 1s;
+  transition-timing-function: ease;
+  z-index: 1;
+}
+
+.child--red {
+  left: 0;
+  top: 0;
+  background-color: red;
+  transform-origin: top left;
+}
+
+.child--yellow {
+  left: 10rem;
+  top: 0;
+  background-color: yellow;
+  transform-origin: top right;
+}
+
+.child--blue {
+  left: 0;
+  top: 10rem;
+  background-color: blue;
+  transform-origin: bottom left;
+}
+
+.child--green {
+  left: 10rem;
+  top: 10rem;
+  background-color: green;
+  transform-origin: bottom right;
+}
+
+.parent:hover .child--red {
+  transform: rotate(90deg);
+}
+
+.parent:hover .child--yellow {
+  transform: rotate(-90deg);
+}
+
+.parent:hover .child--blue {
+  transform: rotate(-90deg);
+}
+
+.parent:hover .child--green {
+  transform: rotate(90deg);
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  justify-content: space-around;
+}
+
+.header > h1 {
+  font-size: 3rem;
+}
